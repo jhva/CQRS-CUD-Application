@@ -1,0 +1,42 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://3.38.117.220:3306/test11
+    username: root
+    password: 1234
+  kafka:
+    producer:
+      properties:
+        min:
+          in-sync:
+            replicas: 2
+      acks: all
+kafka:
+  bootstrapAddress: b-2.autoevermskcluste.8lkbt2.c4.kafka.ap-northeast-2.amazonaws.com:9092,b-1.autoevermskcluste.8lkbt2.c4.kafka.ap-northeast-2.amazonaws.com:9092
+
+
+  admin:
+    properties:
+  topic:
+    producer:
+      name: rapa-auto-ever
+      replicationFactor: 2
+      numPartitions: 2
+  consumer:
+    consumer:
+      group-id: rapa-auto-ever-group
+      auto-offset-reset: earliest
+  producer:
+    retry: 3
+    enable-idempotence: true
+    max-in-flight-requests-per-connection: 3
+
+
+
