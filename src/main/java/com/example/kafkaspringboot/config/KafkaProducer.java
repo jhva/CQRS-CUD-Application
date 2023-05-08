@@ -1,6 +1,5 @@
 package com.example.kafkaspringboot.config;
 
-import com.example.kafkaspringboot.dto.ResponseMan;
 
 import org.springframework.kafka.support.serializer.JsonSerializer;
 import org.apache.kafka.common.serialization.StringSerializer;
@@ -15,6 +14,8 @@ import org.springframework.kafka.core.ProducerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import com.example.kafkaspringboot.dto.ResponseMan;
 
 @Configuration
 public class KafkaProducer {

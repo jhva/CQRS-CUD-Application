@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RequiredArgsConstructor
 @Slf4j
 public class ProducerService {
-    @Value("${kafka.topic.producer.name}")
+    @Value("topic-kid")
     private String topicName;
     private final KafkaTemplate<String, ResponseMan> kafkaTemplate;
     private final ManRepository manRepository;

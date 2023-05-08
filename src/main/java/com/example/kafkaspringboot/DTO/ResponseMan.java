@@ -1,4 +1,4 @@
-package com.example.kafkaspringboot.DTO;
+package com.example.kafkaspringboot.dto;
 
 import java.io.Serializable;
 

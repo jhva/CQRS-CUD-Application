@@ -8,7 +8,7 @@ spring:
         show_sql: true
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://3.38.117.220:3306/test11
+    url: jdbc:mariadb://3.38.117.220:3306/test12
     username: root
     password: 1234
   kafka:
@@ -19,14 +19,14 @@ spring:
             replicas: 2
       acks: all
 kafka:
-  bootstrapAddress: b-2.autoevermskcluste.8lkbt2.c4.kafka.ap-northeast-2.amazonaws.com:9092,b-1.autoevermskcluste.8lkbt2.c4.kafka.ap-northeast-2.amazonaws.com:9092
+  bootstrapAddress: b-1.mskcluster.n2mm1y.c4.kafka.ap-northeast-2.amazonaws.com:9092,b-2.mskcluster.n2mm1y.c4.kafka.ap-northeast-2.amazonaws.com:9092
 
 
   admin:
     properties:
   topic:
-    producer:
-      name: rapa-auto-ever
+    kid:
+      name: topic-kid
       replicationFactor: 2
       numPartitions: 2
   consumer:

@@ -20,7 +20,6 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/api/v1")
 @RequiredArgsConstructor
 public class KafkaController {
-    private final ManRepository manRepository;
 
     private final ProducerService producerService;
 

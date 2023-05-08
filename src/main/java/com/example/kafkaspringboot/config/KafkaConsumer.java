@@ -1,7 +1,6 @@
 package com.example.kafkaspringboot.config;
 
 
-import com.example.kafkaspringboot.DTO.ResponseMan;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
@@ -16,6 +15,8 @@ import org.springframework.kafka.listener.ContainerProperties;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import com.example.kafkaspringboot.dto.ResponseMan;
 
 @EnableKafka
 @Configuration
